@@ -26,8 +26,11 @@ function createGrid (number) {
 let changeGrid = document.querySelector(".change-grid");
 changeGrid.addEventListener("click", () => {
     let questionGrid = prompt("Enter your prefered grid size");
-    return createGrid (questionGrid);
-})
+    while(questionGrid>64) {
+        questionGrid = prompt("Please enter your grid size again");
+    }
+        return createGrid (questionGrid);
+});
 
 //all the other functions
 
