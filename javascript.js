@@ -1,6 +1,7 @@
 //function to create a 16*16 grid
 
 function createGrid (number) {
+    container.innerHTML = "";
     for (let i = 0; i < number; i++) {
         let rowDiv = document.createElement("div");
         rowDiv.classList.add("row-div");
@@ -19,6 +20,14 @@ function createGrid (number) {
         container.appendChild(rowDiv);
     }
 }
+
+//input prompt
+
+let changeGrid = document.querySelector(".change-grid");
+changeGrid.addEventListener("click", () => {
+    let questionGrid = prompt("Enter your prefered grid size");
+    return createGrid (questionGrid);
+})
 
 //all the other functions
 
